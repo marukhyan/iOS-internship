@@ -101,14 +101,21 @@ finalSet = someSet1.union(someSet2)
 for name in finalSet.sorted() {
     print(name)
 }
- /*
-Task 5
-Write a program to enter numbers and store them in a container but only unique values.
- */
-print("\nTask 5\n")
-
 /*
-Task 6
-Duplicates are not allowed. If user enters a number which already in a container program should print a text and inform user that entered number already exists.
+Task 5
+Write a program to enter numbers and store them in a container but only unique
+values.Duplicates are not allowed. If user enters a number which already in a
+container program should print a text and inform user that entered number already
+exists.
 */
-print("\nTask 6\n")
+print("\nTask 5\n")
+var numbers: Set<Int> = []
+var unit:Int? = Int(readLine()!)
+repeat {
+   numbers.insert(unit!)
+   print(numbers.sorted())
+   unit = Int(readLine()!)
+} while !(numbers.contains(unit!))
+if(numbers.contains(unit!)) {
+   print("This number already exists")
+}
