@@ -21,16 +21,15 @@ Modify function defined in the 1st point of the homework. Add new boolean parame
 print("\nTask 2\n")
 func aAFinder (str: String, uppercase: Bool) -> Int {
     var counter = 0
+    let symb:Character = uppercase ? "A" : "a"
     for char in str {
-        if char == "A" && uppercase == true {
-            counter += 1
-        } else if char == "a" && uppercase == false{
+        if char == symb {
             counter += 1
         }
     }
     return counter
 }
-print(aAFinder(str: name, uppercase: false))
+print(aAFinder(str: name, uppercase: true))
  /*
 Task 3
 Modify 1st point of the homework. Add multiple return values to the function so it can return the number of 'a' and 'A' symbols separately.
@@ -94,15 +93,7 @@ Write a function which has one in-out parameter of type string. Function must mo
 print("\nTask 6\n")
 
 func aRemover(str: inout String) {
-    var strWithouta = ""
-    for char in str {
-        if char != "a" {
-            strWithouta.append(char)
-        } else {
-            continue
-        }
-    }
-    str = strWithouta
+    str.removeAll {$0 == "a"}
 }
 var newStr = "Davit Marukhyan"
 print(newStr)
@@ -124,12 +115,10 @@ Write a function which returns a function which compares 2 integers. Call first 
  */
 print("\nTask 8\n")
 func increaser(for x: Int) -> Int{
-    let y = x + 1
-    return  y
+    return  x + 1
 }
 func deacreaser(for x: Int) -> Int {
-    let y = x - 1
-    return y
+    return x + 1
 }
 func mutator(increase: Bool) -> (Int) -> Int {
     increase ? increaser : deacreaser
