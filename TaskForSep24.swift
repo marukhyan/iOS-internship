@@ -118,7 +118,7 @@ func increaser(for x: Int) -> Int{
     return  x + 1
 }
 func deacreaser(for x: Int) -> Int {
-    return x + 1
+    return x - 1
 }
 func mutator(increase: Bool) -> (Int) -> Int {
     increase ? increaser : deacreaser
