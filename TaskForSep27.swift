@@ -4,7 +4,7 @@ Task 1
 */
 print("Task 1\n")
 var strArrayFor1 = ["Davit", "Moso", "Martin", "Davit", "Narek", "Armen"]
-func size(s1: String, s2:String) -> Bool {
+func size(s1: String, s2: String) -> Bool {
     return s1.count > s2.count
 }
 var res = strArrayFor1.sorted(by: size)
@@ -27,10 +27,11 @@ print("\nTask 3\n")
 var closurePrint: (Int) -> (Void) = { value in
     print("The sum of two numbers is \(value)")
 }
-func func1(a: Int, b: Int) {
-    closurePrint(a + b)
+func func1(a: Int, b: Int,_ closure: (Int) -> (Void)) {
+    closure(a + b)
 }
-func1(a: 5, b: 6)
+func1(a: 5, b: 7, closurePrint)
+
 
 /*
 Task 4
