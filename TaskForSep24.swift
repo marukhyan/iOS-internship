@@ -21,7 +21,7 @@ Modify function defined in the 1st point of the homework. Add new boolean parame
 print("\nTask 2\n")
 func aAFinder (str: String, uppercase: Bool) -> Int {
     var counter = 0
-    let symb:Character = uppercase ? "A" : "a"
+    let symb: Character = uppercase ? "A" : "a"
     for char in str {
         if char == symb {
             counter += 1
