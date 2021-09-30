@@ -51,10 +51,10 @@ print(obj.side)
  */
 print("\nTask 3\n")
 class MathFucntion {
-    var x:Double
-    var y:Double
-    var z:Double {
-            return (x + y) / 2
+    var x: Double
+    var y: Double
+    var z: Double {
+        return (x + y) / 2
         }
     init(x: Double, y: Double) {
         self.x = x
