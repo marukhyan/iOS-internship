@@ -4,24 +4,24 @@
  */
 print("Task 1\n")
 struct Student {
-    var name: String = ""
-    var grade: String = ""
+    var name = ""
+    var grade = ""
 }
 
 class University {
     var students: [Student] = []
     
-    func newStudent(name a: String, grade b: String) {
-        students.append(Student(name: a, grade: b))
+    func newStudent(student: Student) {
+        students.append(student)
     }
     
-    func removeAllStudents() -> () {
+    func removeAllStudents() {
         students.removeAll()
         print("All students were deleted from base")
     }
     
-    func printStudents() -> () {
-        if students.count < 1 {
+    func printStudents() {
+        if students.isEmpty {
             print("Empty list")
         }
         for stud in students {
@@ -31,12 +31,14 @@ class University {
 }
 
 var oxford = University()
-oxford.newStudent(name: "Davit Marukhyan", grade: "Master")
-oxford.newStudent(name: "Narek Sahakyan", grade: "Master")
+var firstStudent = Student(name: "Davit Marukhyan", grade: "Master")
+var secondStudent = Student(name: "Narek Sahakyan", grade: "Master")
+oxford.newStudent(student: firstStudent)
+oxford.newStudent(student: secondStudent)
 oxford.printStudents()
 oxford.removeAllStudents()
 oxford.printStudents()
-oxford.newStudent(name: "Narek Sahakyan", grade: "Master")
+oxford.newStudent(student: secondStudent)
 oxford.printStudents()
 
 /*
@@ -47,15 +49,15 @@ print("\nTask 2\n")
 class Increment {
     var counter: Int = 0
     
-    func increase() -> () {
+    func increase() {
         self.counter += 1
     }
     
-    func decrease() -> () {
+    func decrease() {
         self.counter -= 1
     }
     
-    func toDeafultValue() -> () {
+    func toDeafultValue() {
         self.counter = 0
     }
 }
