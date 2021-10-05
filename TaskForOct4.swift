@@ -36,7 +36,7 @@ class Matrix {
         self.column = column
         matrix = Array(repeating: 1, count: row * column)
     }
-    func validIndex(row: Int, column: Int) -> (Bool) {
+    func validIndex(row: Int, column: Int) -> Bool {
         return row < self.row && row >= 0 && column < self.column && column > 0
     }
     

@@ -14,13 +14,13 @@ struct Person {
         self.surname = surname
         self.age = age
     }
-    func nameSurnameAge() {
+    func printNameSurnameAge() {
         print(name , surname, "age: ", age)
     }
 }
 
 var person = Person(name: "Davit", surname: "Marukhyan", age: 23)
-person.nameSurnameAge()
+person.printNameSurnameAge()
 
 /*
  Task 2

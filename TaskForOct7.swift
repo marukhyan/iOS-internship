@@ -22,13 +22,13 @@ class Table {
 }
 
 func descriptionCaller(table: Table) {
+    let testObject = Table(weight: 67)
     table.description()
-    //let testObject = Table(weight: 67)
 }
 
 var table = Table(weight: 55)
 descriptionCaller(table: table)
 
 /*
- Deinitializes will no be called for table instance because we are not going out of scope. But if we create an instance of Table class in descriptionCaller(f. e. testObject)... Deinitializer will be called for testObject.
+ Deinitializes will not be called for table instance because we are not going out of scope. But if we create an instance of Table class in descriptionCaller(f. e. testObject)... Deinitializer will be called for testObject.
  */
