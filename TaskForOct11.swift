@@ -3,7 +3,7 @@
  Create an enum which conforms to Error protocol. Define 2 error cases in that enum, one error case name should be outOfBounds, for second set name which you want.
  */
 
-enum arrayErrorList: Error {
+enum ArrayErrorList: Error {
     case outOfBounds
     case minusNumber
 }
@@ -14,12 +14,12 @@ enum arrayErrorList: Error {
  */
 
 func myFunction(index: Int) throws -> Int {
-    let arr = [2,3,-3,5,6]
+    let arr = [2, 3, -3, 5, 6]
     if index < 0 || index >= arr.count {
-        throw arrayErrorList.outOfBounds
+        throw ArrayErrorList.outOfBounds
     }
     if arr[index] < 0 {
-        throw arrayErrorList.minusNumber
+        throw ArrayErrorList.minusNumber
     }
     return arr[index]
 }
@@ -31,8 +31,8 @@ func myFunction(index: Int) throws -> Int {
 
 do {
     try print(myFunction(index: 2))
-} catch arrayErrorList.outOfBounds {
+} catch ArrayErrorList.outOfBounds {
     print("Out of Bounds")
-} catch arrayErrorList.minusNumber {
+} catch ArrayErrorList.minusNumber {
     print("Minus detected in array")
 }

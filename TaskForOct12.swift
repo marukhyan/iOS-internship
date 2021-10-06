@@ -31,6 +31,19 @@ var d2 = Derived2()
 var d3 = d1 as Base
 var d4 = Derived1Derived()
 
+print(d1.f())
+print(d2.f())
+print(d3.f())
+print(d4.f())
+
+if d1 is Derived2 {
+    print("d1 is Derived2 type")
+}
+
+if d2 is Derived1 {
+    print("d2 is Derived1 type")
+}
+
 if d3 is Derived1 {
     print("d3 is Derived1 type")
 }
@@ -39,9 +52,7 @@ if d4 is Base {
     print("d4 is Base type")
 }
 
-if d1 is Derived2 {
-    print("d1 is Derived2 type")
-}
+
 
 
 /*
