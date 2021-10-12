@@ -17,9 +17,7 @@ func compareFirst<T: Comparable>(param1: T, param2: T) -> Compare {
         return Compare.greater
     } else if param1 < param2 {
         return Compare.less
-    } else {
-        return Compare.equal
-    }
+    } return Compare.equal
 }
 
 // Function usage
@@ -46,6 +44,7 @@ class Person: Comparable {
     
     let age: Int
     let weight: Int
+    
     init(age: Int, weight: Int) {
         self.age = age
         self.weight = weight
@@ -69,15 +68,14 @@ func compare<T: Comparable>(param1: T, param2: T) -> Compare where T: AnyObject 
         return Compare.greater
     } else if param1 < param2 {
         return Compare.less
-    } else {
-        return Compare.equal
-    }
+    } return Compare.equal
 }
 
 // New class which doesn't confirm to Comparable protocol
 class SimplePerson {
     let name: String
     let age: Int
+    
     init(name: String, age: Int) {
         self.name = name
         self.age = age
