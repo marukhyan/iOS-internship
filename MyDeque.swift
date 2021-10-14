@@ -58,6 +58,7 @@ class Deque<T> {
     
     func first() -> T? {
         if isEmpty {
+            print("No element")
             return nil
         } else {
             return array[firstElementPointer]!
@@ -66,18 +67,31 @@ class Deque<T> {
     
     func last() -> T? {
         if isEmpty {
+            print("No element")
             return nil
         } else {
             return array.last!
         }
     }
     
-    func insert(number: T,position: Int) {
-        if firstElementPointer + position <= array.count {
-            array.insert(number, at: firstElementPointer + position)
+    func insert(index: Int, element: T) {
+        if firstElementPointer + index <= array.count {
+            array.insert(element, at: firstElementPointer + index)
         } else {
             print("Out of bounds")
         }
+    }
+    
+    subscript(index: Int) -> T? {
+        if isEmpty {
+            print("No element")
+            return nil
+        } else if firstElementPointer + index >= array.count {
+            print("Out of range")
+            return nil
+        }
+        return array[firstElementPointer + index]
+
     }
     
     func printElements() {
@@ -88,6 +102,8 @@ class Deque<T> {
         }
         print("\n")
     }
+    
+    
     
 }
 
@@ -109,34 +125,42 @@ _ = deque.popFront()
 _ = deque.popFront()
 _ = deque.popBack()
 
-deque.insert(number: 6, position: 0)
-deque.insert(number: 7, position: 1)
-deque.insert(number: 8, position: 2)
+deque.insert(index: 0, element: 6)
+deque.insert(index: 1, element: 7)
+deque.insert(index: 2, element: 8)
 
-deque.insert(number: 9, position: 10)
+deque.insert(index: 9, element: 10)
 deque.printElements()
 
 var deque2 = Deque(deque: deque)
 deque2.printElements()
 print(deque2.array)
 deque2.pushFront(element: 9)
-deque2.pushFront(element: 9)
-deque2.pushFront(element: 9)
-deque2.pushFront(element: 9)
-deque2.pushFront(element: 9)
-deque2.pushFront(element: 9)
-deque2.pushFront(element: 9)
-deque2.pushFront(element: 9)
-deque2.pushFront(element: 9)
-deque2.pushFront(element: 9)
-
-deque2.pushFront(element: 9)
-deque2.pushFront(element: 9)
-deque2.pushFront(element: 9)
-deque2.pushFront(element: 9)
-deque2.pushFront(element: 9)
-deque2.pushFront(element: 9)
+//deque2.pushFront(element: 9)
+//deque2.pushFront(element: 9)
+//deque2.pushFront(element: 9)
+//deque2.pushFront(element: 9)
+//deque2.pushFront(element: 9)
+//deque2.pushFront(element: 9)
+//deque2.pushFront(element: 9)
+//deque2.pushFront(element: 9)
+//deque2.pushFront(element: 9)
+//
+//deque2.pushFront(element: 9)
+//deque2.pushFront(element: 9)
+//deque2.pushFront(element: 9)
+//deque2.pushFront(element: 9)
+//deque2.pushFront(element: 9)
+//deque2.pushFront(element: 9)
 
 print(deque2.array)
 print(deque2.first()!)
 print(deque2.last()!)
+print(deque2[0]!)
+print(deque2[1]!)
+print(deque2[2]!)
+
+print(deque2[3]!)
+if let num = deque2[4] {
+    print(num)
+}
