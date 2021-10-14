@@ -1,6 +1,6 @@
 class Deque<T> {
-    var array: [T?]
-    var firstElementPointer: Int
+    private var array: [T?]
+    private var firstElementPointer: Int
     
     var count: Int { return array.count - firstElementPointer }
     var isEmpty: Bool { return count == 0 }
@@ -30,6 +30,7 @@ class Deque<T> {
             array.insert(contentsOf: temp, at: 0)
             firstElementPointer = temp.count
         }
+        
         firstElementPointer -= 1
         array[firstElementPointer] = element
     }
@@ -90,8 +91,8 @@ class Deque<T> {
             print("Out of range")
             return nil
         }
+        
         return array[firstElementPointer + index]
-
     }
     
     func printElements() {
@@ -102,65 +103,4 @@ class Deque<T> {
         }
         print("\n")
     }
-    
-    
-    
-}
-
-// Testing my Deque
-
-var deque = Deque<Int>()
-
-deque.pushBack(element: 1)
-deque.pushBack(element: 2)
-deque.pushFront(element: 3)
-deque.pushFront(element: 4)
-deque.printElements()
-
-_ = deque.popFront()
-_ = deque.popFront()
-_ = deque.popFront()
-_ = deque.popFront()
-
-_ = deque.popFront()
-_ = deque.popBack()
-
-deque.insert(index: 0, element: 6)
-deque.insert(index: 1, element: 7)
-deque.insert(index: 2, element: 8)
-
-deque.insert(index: 9, element: 10)
-deque.printElements()
-
-var deque2 = Deque(deque: deque)
-deque2.printElements()
-print(deque2.array)
-deque2.pushFront(element: 9)
-//deque2.pushFront(element: 9)
-//deque2.pushFront(element: 9)
-//deque2.pushFront(element: 9)
-//deque2.pushFront(element: 9)
-//deque2.pushFront(element: 9)
-//deque2.pushFront(element: 9)
-//deque2.pushFront(element: 9)
-//deque2.pushFront(element: 9)
-//deque2.pushFront(element: 9)
-//
-//deque2.pushFront(element: 9)
-//deque2.pushFront(element: 9)
-//deque2.pushFront(element: 9)
-//deque2.pushFront(element: 9)
-//deque2.pushFront(element: 9)
-//deque2.pushFront(element: 9)
-
-print(deque2.array)
-print(deque2.first()!)
-print(deque2.last()!)
-print(deque2[0]!)
-print(deque2[1]!)
-print(deque2[2]!)
-
-print(deque2[3]!)
-if let num = deque2[4] {
-    print(num)
 }
