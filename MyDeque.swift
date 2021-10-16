@@ -4,7 +4,7 @@ class Deque<T> {
         case EmptyDeque
     }
     
-     var array: [T?]
+    private var array: [T?]
     private var firstElementPointer: Int
     
     var count: Int { return array.count - firstElementPointer }
@@ -35,7 +35,6 @@ class Deque<T> {
             array.insert(contentsOf: temp, at: 0)
             firstElementPointer = temp.count
         }
-        
         firstElementPointer -= 1
         array[firstElementPointer] = element
     }
@@ -44,7 +43,6 @@ class Deque<T> {
         if firstElementPointer >= array.count {
             throw ArrayError.OutOfBounds
         }
-        
         let element = array[firstElementPointer]
         array[firstElementPointer] = nil
         firstElementPointer += 1
@@ -79,16 +77,35 @@ class Deque<T> {
         throw ArrayError.OutOfBounds
     }
     
-    subscript(index: Int) -> T? {
+    subscript(index: Int) -> T {
         if isEmpty {
             print("No element")
-            return nil
         } else if firstElementPointer + index >= array.count {
             print("Out of range")
-            return nil
         }
+        return array[firstElementPointer + index]!
+    }
+    
+    func sort<T: Comparable>(byMethod: (T,T) -> Bool) {
         
-        return array[firstElementPointer + index]
+        for _ in 0..<array.count {
+            for j in 1..<array.count {
+                if byMethod(array[j] as! T,array[j - 1] as! T) {
+                    let tmp = array[j - 1]
+                    array[j - 1] = array[j]
+                    array[j] = tmp
+                }
+            }
+        }
+    }
+    
+    func findElement<T: Equatable>(element: T) ->  Bool {
+        for i in 0..<array.count {
+            if array[i] as! T == element {
+                return true
+            }
+        }
+        return false
     }
     
     func printElements() {
@@ -99,4 +116,21 @@ class Deque<T> {
         }
         print("\n")
     }
+    
 }
+
+var deque = Deque<Int>()
+deque.pushFront(element: 2)
+deque.pushBack(element: 7)
+deque.pushFront(element: 1)
+deque.pushBack(element: 3)
+deque.pushFront(element: 4)
+deque.pushBack(element: 5)
+deque.printElements()
+deque.sort(byMethod: {(num1: Int, num2: Int) -> Bool in
+            return num1 > num2})
+deque.printElements()
+deque.sort(byMethod: {(num1: Int, num2: Int) -> Bool in
+            return num1 < num2})
+deque.printElements()
+print(deque.findElement(element: 0))
