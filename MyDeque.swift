@@ -1,8 +1,10 @@
+enum ArrayError: Error {
+    case OutOfBounds
+    case EmptyDeque
+}
+
 class Deque<T> {
-    enum ArrayError: Error {
-        case OutOfBounds
-        case EmptyDeque
-    }
+
     
     private var array: [T?]
     private var firstElementPointer: Int
@@ -73,8 +75,10 @@ class Deque<T> {
     func insert(index: Int, element: T) throws {
         if firstElementPointer + index <= array.count {
             array.insert(element, at: firstElementPointer + index)
+        } else {
+            throw ArrayError.OutOfBounds
         }
-        throw ArrayError.OutOfBounds
+        
     }
     
     subscript(index: Int) -> T {
@@ -116,19 +120,3 @@ class Deque<T> {
     }
     
 }
-
-var deque = Deque<Int>()
-deque.pushFront(element: 2)
-deque.pushBack(element: 7)
-deque.pushFront(element: 1)
-deque.pushBack(element: 3)
-deque.pushFront(element: 4)
-deque.pushBack(element: 5)
-deque.printElements()
-deque.sort(byMethod: {(num1: Int, num2: Int) -> Bool in
-            return num1 > num2})
-deque.printElements()
-deque.sort(byMethod: {(num1: Int, num2: Int) -> Bool in
-            return num1 < num2})
-deque.printElements()
-print(deque.findElement(element: 0))
