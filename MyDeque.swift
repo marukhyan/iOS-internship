@@ -1,5 +1,10 @@
 class Deque<T> {
-    private var array: [T?]
+    enum ArrayError: Error {
+        case OutOfBounds
+        case EmptyDeque
+    }
+    
+     var array: [T?]
     private var firstElementPointer: Int
     
     var count: Int { return array.count - firstElementPointer }
@@ -35,52 +40,43 @@ class Deque<T> {
         array[firstElementPointer] = element
     }
     
-    func popFront() -> T? {
+    func popFront() throws -> T {
         if firstElementPointer >= array.count {
-            print("No element")
-            return nil
+            throw ArrayError.OutOfBounds
         }
         
         let element = array[firstElementPointer]
         array[firstElementPointer] = nil
         firstElementPointer += 1
-        
-        return element
+        return element!
     }
     
-    func popBack() -> T? {
+    func popBack() throws -> T {
         if isEmpty {
-            print("No element")
-            return nil
-        } else {
-            return array.removeLast()
+            throw ArrayError.EmptyDeque
         }
+        return array.removeLast()!
     }
     
-    func first() -> T? {
+    func first() throws -> T {
         if isEmpty {
-            print("No element")
-            return nil
-        } else {
-            return array[firstElementPointer]!
+            throw ArrayError.EmptyDeque
         }
+        return array[firstElementPointer]!
     }
     
-    func last() -> T? {
+    func last() throws -> T {
         if isEmpty {
-            print("No element")
-            return nil
-        } else {
-            return array.last!
+            throw ArrayError.EmptyDeque
         }
+        return array.last!!
     }
     
-    func insert(index: Int, element: T) {
+    func insert(index: Int, element: T) throws {
         if firstElementPointer + index <= array.count {
             array.insert(element, at: firstElementPointer + index)
-        } else {
-            print("Out of bounds")
         }
+        throw ArrayError.OutOfBounds
     }
     
     subscript(index: Int) -> T? {
