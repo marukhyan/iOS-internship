@@ -88,8 +88,8 @@ class Deque<T> {
     
     func sort<T: Comparable>(byMethod: (T,T) -> Bool) {
         
-        for _ in 0..<array.count {
-            for j in 1..<array.count {
+        for _ in firstElementPointer..<array.count {
+            for j in (firstElementPointer + 1)..<array.count {
                 if byMethod(array[j] as! T,array[j - 1] as! T) {
                     let tmp = array[j - 1]
                     array[j - 1] = array[j]
@@ -109,10 +109,8 @@ class Deque<T> {
     }
     
     func printElements() {
-        for elem in array {
-            if elem != nil {
-                print(elem!, terminator: " ")
-            }
+        for i in firstElementPointer..<array.count {
+            print(array[i]!, terminator: " ")
         }
         print("\n")
     }
