@@ -73,7 +73,7 @@ class Deque<T> {
     }
     
     func insert(index: Int, element: T) throws {
-        if firstElementPointer + index <= array.count {
+        if firstElementPointer + index <= array.count && index >= 0  {
             array.insert(element, at: firstElementPointer + index)
         } else {
             throw ArrayError.OutOfBounds
