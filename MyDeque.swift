@@ -81,11 +81,13 @@ class Deque<T> {
         
     }
     
-    subscript(index: Int) -> T {
+    subscript(index: Int) -> T? {
         if isEmpty {
             print("No element")
-        } else if firstElementPointer + index >= array.count {
+            return nil
+        } else if firstElementPointer + index >= array.count || index < 0 {
             print("Out of range")
+            return nil
         }
         return array[firstElementPointer + index]!
     }
