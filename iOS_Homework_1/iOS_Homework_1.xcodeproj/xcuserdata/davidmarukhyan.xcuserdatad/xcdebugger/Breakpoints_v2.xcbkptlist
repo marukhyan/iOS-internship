@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A00C07B3-5C37-4195-98BB-8A28BD194F74"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23DDCE63-3BE2-4505-BF06-27BAF9BE94B7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS_Homework_1/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "23DDCE63-3BE2-4505-BF06-27BAF9BE94B7 - cd514d85f69b1c0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.label.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "23DDCE63-3BE2-4505-BF06-27BAF9BE94B7 - bc9f026aa10d4c1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.label.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "23DDCE63-3BE2-4505-BF06-27BAF9BE94B7 - 6d55b19bd8f243fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.label.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "23DDCE63-3BE2-4505-BF06-27BAF9BE94B7 - 1dd46cada44b2593"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.label.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "23DDCE63-3BE2-4505-BF06-27BAF9BE94B7 - 623efd2323e15c55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; iOS_Homework_1.ViewController"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "178">
+               </Location>
+               <Location
+                  uuid = "23DDCE63-3BE2-4505-BF06-27BAF9BE94B7 - cf150e094881b991"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;iOS_Homework_1.ViewController&gt;"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "134">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0455A092-A749-4E53-9798-B9173773DB60"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS_Homework_1/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "0455A092-A749-4E53-9798-B9173773DB60 - b8821fc283e23365"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.switchButton.getter : Swift.Optional&lt;__C.UISwitch&gt;"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "0455A092-A749-4E53-9798-B9173773DB60 - 5ffe67290e086371"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.switchButton.setter : Swift.Optional&lt;__C.UISwitch&gt;"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "0455A092-A749-4E53-9798-B9173773DB60 - e1cf49f609f85553"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.switchButton.modify : Swift.Optional&lt;__C.UISwitch&gt;"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "0455A092-A749-4E53-9798-B9173773DB60 - 5e2f0c97d8e87472"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.switchButton.modify : Swift.Optional&lt;__C.UISwitch&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "0455A092-A749-4E53-9798-B9173773DB60 - 623efd2323e15d93"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; iOS_Homework_1.ViewController"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "295">
+               </Location>
+               <Location
+                  uuid = "0455A092-A749-4E53-9798-B9173773DB60 - cf150e094881b857"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;iOS_Homework_1.ViewController&gt;"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "248">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04DAA5B2-75A3-4D77-A923-150BFAFE87EC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS_Homework_1/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "04DAA5B2-75A3-4D77-A923-150BFAFE87EC - cd514d85f69b1c0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.label.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "04DAA5B2-75A3-4D77-A923-150BFAFE87EC - bc9f026aa10d4c1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.label.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "04DAA5B2-75A3-4D77-A923-150BFAFE87EC - 6d55b19bd8f243fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.label.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "04DAA5B2-75A3-4D77-A923-150BFAFE87EC - 1dd46cada44b2593"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.label.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "04DAA5B2-75A3-4D77-A923-150BFAFE87EC - 623efd2323e15c55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; iOS_Homework_1.ViewController"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "178">
+               </Location>
+               <Location
+                  uuid = "04DAA5B2-75A3-4D77-A923-150BFAFE87EC - cf150e094881b991"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Homework_1.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;iOS_Homework_1.ViewController&gt;"
+                  moduleName = "iOS_Homework_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidmarukhyan/Documents/GitHub/iOS-internship/iOS_Homework_1/iOS_Homework_1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "134">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D363B541-F0EC-485E-8295-42FCFE9FB89A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS_Homework_1/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
