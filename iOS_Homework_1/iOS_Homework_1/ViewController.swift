@@ -9,17 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var switchButton: UISwitch!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-
 
     @IBAction func buttonTapped(_ sender: Any) {
         if switchButton.isOn {
@@ -28,8 +24,5 @@ class ViewController: UIViewController {
             label.text = String(Int.random(in: 0...10))
         }
     }
-    
-    
-    
 }
 
