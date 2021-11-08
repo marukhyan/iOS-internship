@@ -41,5 +41,11 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let secondVC = storyBoard.instantiateViewController(identifier: "ActorVCID") as! ActorBioViewController
+        navigationController?.pushViewController(secondVC, animated: true)
+        secondVC.img = UIImage(named: actors[indexPath.row])!
+        secondVC.text = actors[indexPath.row]
+    }
 }

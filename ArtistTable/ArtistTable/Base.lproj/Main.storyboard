@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WTC-zh-aEa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wTe-iP-Cih" customClass="Ac" customModule="ArtistTable" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ActorCell" rowHeight="90" id="Q4d-pc-7fo" customClass="ActorsList" customModule="ArtistTable" customModuleProvider="target">
@@ -71,17 +71,88 @@
                             <constraint firstItem="wTe-iP-Cih" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vJd-DH-HRT"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="tze-mF-mLz"/>
                     <connections>
                         <outlet property="actorsTableView" destination="wTe-iP-Cih" id="WC3-jO-683"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="77.678571428571431"/>
+            <point key="canvasLocation" x="1833.3333333333335" y="77.678571428571431"/>
+        </scene>
+        <!--Actor Bio View Controller-->
+        <scene sceneID="sJ8-96-0Xt">
+            <objects>
+                <viewController storyboardIdentifier="ActorVCID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YtT-8J-XNh" customClass="ActorBioViewController" customModule="ArtistTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LIx-lQ-Wna">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jim Carry" translatesAutoresizingMaskIntoConstraints="NO" id="I2H-eB-LgM">
+                                <rect key="frame" x="87" y="84" width="240" height="160"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="58R-Ei-7ds"/>
+                                    <constraint firstAttribute="height" constant="160" id="M6c-Uk-PDP"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ihs-IN-37J">
+                                <rect key="frame" x="87" y="304" width="240" height="360"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="360" id="TyF-6I-bHk"/>
+                                    <constraint firstAttribute="width" constant="240" id="YOU-HE-d8S"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4aA-64-Emw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ihs-IN-37J" firstAttribute="centerX" secondItem="LIx-lQ-Wna" secondAttribute="centerX" id="1Mt-UJ-QD3"/>
+                            <constraint firstItem="ihs-IN-37J" firstAttribute="top" secondItem="I2H-eB-LgM" secondAttribute="bottom" constant="60" id="PjW-gR-YfF"/>
+                            <constraint firstItem="I2H-eB-LgM" firstAttribute="centerX" secondItem="LIx-lQ-Wna" secondAttribute="centerX" id="SxA-80-1BO"/>
+                            <constraint firstItem="I2H-eB-LgM" firstAttribute="top" secondItem="4aA-64-Emw" secondAttribute="top" constant="40" id="YrM-Ej-0vo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="opK-zb-ZYN"/>
+                    <connections>
+                        <outlet property="actorBioImage" destination="I2H-eB-LgM" id="9Ve-c6-OZY"/>
+                        <outlet property="actorBioText" destination="ihs-IN-37J" id="O0j-i1-bU6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TGf-wx-eFX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2714.4927536231885" y="82.366071428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h88-T2-r6U">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WTC-zh-aEa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="49R-oN-4gS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="k9Q-I5-V0n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fum-iC-u7q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926.08695652173924" y="77.678571428571431"/>
         </scene>
     </scenes>
     <resources>
         <image name="Jim Carry" width="202" height="249"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
