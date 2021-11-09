@@ -15,6 +15,7 @@
 		AC30C8A227394D37000621C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC30C8A027394D37000621C9 /* LaunchScreen.storyboard */; };
 		ACA3CBA72739AF850095401E /* ActorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA3CBA62739AF850095401E /* ActorsTableViewCell.swift */; };
 		ACE109452739C007002B3AF3 /* ActorBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE109442739C007002B3AF3 /* ActorBioViewController.swift */; };
+		ACE10947273AFD22002B3AF3 /* ActorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE10946273AFD22002B3AF3 /* ActorData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AC30C8A327394D37000621C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACA3CBA62739AF850095401E /* ActorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorsTableViewCell.swift; sourceTree = "<group>"; };
 		ACE109442739C007002B3AF3 /* ActorBioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorBioViewController.swift; sourceTree = "<group>"; };
+		ACE10946273AFD22002B3AF3 /* ActorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				AC30C89527394D32000621C9 /* AppDelegate.swift */,
 				AC30C89727394D32000621C9 /* SceneDelegate.swift */,
 				AC30C89927394D32000621C9 /* ViewController.swift */,
+				ACE10946273AFD22002B3AF3 /* ActorData.swift */,
 				AC30C89B27394D32000621C9 /* Main.storyboard */,
 				AC30C89E27394D37000621C9 /* Assets.xcassets */,
 				AC30C8A027394D37000621C9 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 				ACE109452739C007002B3AF3 /* ActorBioViewController.swift in Sources */,
 				AC30C89627394D32000621C9 /* AppDelegate.swift in Sources */,
 				AC30C89827394D32000621C9 /* SceneDelegate.swift in Sources */,
+				ACE10947273AFD22002B3AF3 /* ActorData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

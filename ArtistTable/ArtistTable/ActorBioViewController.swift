@@ -8,20 +8,15 @@
 import UIKit
 
 class ActorBioViewController: UIViewController {
-    var img = UIImage()
-    var text = ""
-    
-   
+    var actor: Actor?
     
     @IBOutlet weak var actorBioImage: UIImageView!
     @IBOutlet weak var actorBioText: UITextView!
-    override func viewDidLoad() {
-        //title = actors[index?]
-        //actorBioImage.image = UIImage(named: actors[index!])
-        super.viewDidLoad()
-        actorBioText.text = text
-        actorBioImage.image = img
-    }
     
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = actor?.actorName
+        actorBioImage.image = actor?.image
+        actorBioText.text = actor?.actorBio
+    }
 }
