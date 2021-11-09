@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ActorCell" rowHeight="90" id="Q4d-pc-7fo" customClass="ActorsList" customModule="ArtistTable" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ActorCell" rowHeight="90" id="Q4d-pc-7fo" customClass="ActorsTableViewCell" customModule="ArtistTable" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q4d-pc-7fo" id="JoK-gl-Ww2" customClass="ActorProperties" customModule="ArtistTable" customModuleProvider="target">
@@ -98,13 +98,9 @@
                                     <constraint firstAttribute="height" constant="160" id="M6c-Uk-PDP"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ihs-IN-37J">
-                                <rect key="frame" x="87" y="304" width="240" height="360"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ihs-IN-37J">
+                                <rect key="frame" x="12" y="304" width="390" height="538"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="360" id="TyF-6I-bHk"/>
-                                    <constraint firstAttribute="width" constant="240" id="YOU-HE-d8S"/>
-                                </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -113,10 +109,12 @@
                         <viewLayoutGuide key="safeArea" id="4aA-64-Emw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ihs-IN-37J" firstAttribute="centerX" secondItem="LIx-lQ-Wna" secondAttribute="centerX" id="1Mt-UJ-QD3"/>
-                            <constraint firstItem="ihs-IN-37J" firstAttribute="top" secondItem="I2H-eB-LgM" secondAttribute="bottom" constant="60" id="PjW-gR-YfF"/>
+                            <constraint firstItem="ihs-IN-37J" firstAttribute="top" secondItem="I2H-eB-LgM" secondAttribute="bottom" constant="60" id="87e-yl-50U"/>
                             <constraint firstItem="I2H-eB-LgM" firstAttribute="centerX" secondItem="LIx-lQ-Wna" secondAttribute="centerX" id="SxA-80-1BO"/>
                             <constraint firstItem="I2H-eB-LgM" firstAttribute="top" secondItem="4aA-64-Emw" secondAttribute="top" constant="40" id="YrM-Ej-0vo"/>
+                            <constraint firstItem="4aA-64-Emw" firstAttribute="bottom" secondItem="ihs-IN-37J" secondAttribute="bottom" constant="20" id="a1n-KO-E50"/>
+                            <constraint firstItem="ihs-IN-37J" firstAttribute="leading" secondItem="4aA-64-Emw" secondAttribute="leading" constant="12" id="bKr-dm-IPV"/>
+                            <constraint firstItem="4aA-64-Emw" firstAttribute="trailing" secondItem="ihs-IN-37J" secondAttribute="trailing" constant="12" id="qeI-E4-O3i"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="opK-zb-ZYN"/>

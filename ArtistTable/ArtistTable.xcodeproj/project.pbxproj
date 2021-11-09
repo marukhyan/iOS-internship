@@ -13,7 +13,7 @@
 		AC30C89D27394D32000621C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC30C89B27394D32000621C9 /* Main.storyboard */; };
 		AC30C89F27394D37000621C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC30C89E27394D37000621C9 /* Assets.xcassets */; };
 		AC30C8A227394D37000621C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC30C8A027394D37000621C9 /* LaunchScreen.storyboard */; };
-		ACA3CBA72739AF850095401E /* ActorsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA3CBA62739AF850095401E /* ActorsList.swift */; };
+		ACA3CBA72739AF850095401E /* ActorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA3CBA62739AF850095401E /* ActorsTableViewCell.swift */; };
 		ACE109452739C007002B3AF3 /* ActorBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE109442739C007002B3AF3 /* ActorBioViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		AC30C89E27394D37000621C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC30C8A127394D37000621C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC30C8A327394D37000621C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ACA3CBA62739AF850095401E /* ActorsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorsList.swift; sourceTree = "<group>"; };
+		ACA3CBA62739AF850095401E /* ActorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorsTableViewCell.swift; sourceTree = "<group>"; };
 		ACE109442739C007002B3AF3 /* ActorBioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorBioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +67,7 @@
 				AC30C89E27394D37000621C9 /* Assets.xcassets */,
 				AC30C8A027394D37000621C9 /* LaunchScreen.storyboard */,
 				AC30C8A327394D37000621C9 /* Info.plist */,
-				ACA3CBA62739AF850095401E /* ActorsList.swift */,
+				ACA3CBA62739AF850095401E /* ActorsTableViewCell.swift */,
 				ACE109442739C007002B3AF3 /* ActorBioViewController.swift */,
 			);
 			path = ArtistTable;
@@ -144,7 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC30C89A27394D32000621C9 /* ViewController.swift in Sources */,
-				ACA3CBA72739AF850095401E /* ActorsList.swift in Sources */,
+				ACA3CBA72739AF850095401E /* ActorsTableViewCell.swift in Sources */,
 				ACE109452739C007002B3AF3 /* ActorBioViewController.swift in Sources */,
 				AC30C89627394D32000621C9 /* AppDelegate.swift in Sources */,
 				AC30C89827394D32000621C9 /* SceneDelegate.swift in Sources */,
