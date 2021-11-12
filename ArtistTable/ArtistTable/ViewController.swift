@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     @IBOutlet weak var actorsTableView: UITableView!
-    var actorManager = ActorManager()
-    var actors:[Actor]!
+    private var actorManager = ActorManager()
+    private var actors:[Actor]!
     
     override func viewDidLoad() {
         super.viewDidLoad()

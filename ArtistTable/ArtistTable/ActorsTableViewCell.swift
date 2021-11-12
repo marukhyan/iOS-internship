@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ActorsTableViewCell: UITableViewCell {
+final class ActorsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var actorImage: UIImageView!
     @IBOutlet weak var actorName: UILabel!

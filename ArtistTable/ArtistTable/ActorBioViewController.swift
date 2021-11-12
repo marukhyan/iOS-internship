@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ActorBioViewController: UIViewController {
+final class ActorBioViewController: UIViewController {
     var actor: Actor!
     
     @IBOutlet weak var actorBioImage: UIImageView!
