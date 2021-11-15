@@ -66,6 +66,9 @@ class ViewController: UIViewController {
                 startTime = NSDate()
                 startEndButton.backgroundColor = .systemRed
                 traveledDistance = 0
+                distanceLabel.text = "Distance"
+                timeLabel.text = "Time"
+                priceLabel.text = "Price"
                 startEndButton.setTitle("End trip", for: .normal)
             }
         } else {
