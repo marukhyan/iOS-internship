@@ -32,9 +32,7 @@ class ViewController: UIViewController {
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        //locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        //        locationManager.startUpdatingLocation()
-        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
     @IBAction func setPrice(_ sender: Any) {
