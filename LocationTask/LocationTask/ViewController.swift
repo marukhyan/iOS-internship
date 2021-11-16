@@ -24,19 +24,21 @@ class ViewController: UIViewController {
     var price:Int!
     var startTime: NSDate?
     var endTime: NSDate?
+    var oldLocation: CLLocation?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.startUpdatingLocation()
+        //locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        //        locationManager.startUpdatingLocation()
         
     }
     
     @IBAction func setPrice(_ sender: Any) {
-        if inputField.text == "" {
+        if inputField.text == "" || Int(inputField.text!) == nil {
             errorLabel.text = "Enter Price"
         } else {
             errorLabel.text = ""
@@ -46,22 +48,21 @@ class ViewController: UIViewController {
     
     @IBAction func startEndTrip(_ sender: Any) {
         if price != nil {
-            
             errorLabel.text = ""
+            
             if isStarted {
-                
                 isStarted = false
                 endTime = NSDate()
                 startEndButton.backgroundColor = .systemGreen
                 distanceLabel.text =
                     String(format:"%.2f",Float(traveledDistance / 1000.0 + 0.005)) + "km"
-                timeLabel.text = String(format:"%.2f",Double((endTime!.timeIntervalSince((startTime! as Date)))))
-                priceLabel.text = String(Int(ceil(traveledDistance / 1000.0)) * price)
+                timeLabel.text = String(format:"%.2f",Double((endTime!.timeIntervalSince((startTime! as Date))))) + "sec"
+                priceLabel.text = String(Int(ceil(traveledDistance / 1000.0)) * price) + "dram"
                 startEndButton.setTitle("Start trip", for: .normal)
                 startLocation = nil
-                
+                oldLocation = nil
+                locationManager.stopUpdatingLocation()
             } else {
-                
                 isStarted = true
                 startTime = NSDate()
                 startEndButton.backgroundColor = .systemRed
@@ -70,6 +71,8 @@ class ViewController: UIViewController {
                 timeLabel.text = "Time"
                 priceLabel.text = "Price"
                 startEndButton.setTitle("End trip", for: .normal)
+                oldLocation = locationManager.location
+                locationManager.startUpdatingLocation()
             }
         } else {
             errorLabel.text = "Enter Price"
@@ -79,16 +82,24 @@ class ViewController: UIViewController {
 
 extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let lastLocation = locations.last, lastLocation.coordinate != oldLocation?.coordinate else { return }
         
-        print("didUpdateLocation \(locations.debugDescription)")//To track movements by console
+        print("\ndidUpdateLocation \(lastLocation)") // To track movements by console
+        
         if startLocation == nil {
-            startLocation = locations.last
+            startLocation = lastLocation
+        } else {
+            let distance = startLocation.distance(from: lastLocation)
+            traveledDistance += distance
+            startLocation = lastLocation
         }
         
-        let lastLocation = locations.last!
-        let distance = startLocation.distance(from: lastLocation)
-        traveledDistance += distance
-        startLocation = lastLocation
+        oldLocation = nil
     }
-    
+}
+
+extension CLLocationCoordinate2D: Equatable {
+    public static func == (lhs: CLLocationCoordinate2D, rhs: CLLocationCoordinate2D) -> Bool {
+        return lhs.longitude == rhs.longitude && lhs.latitude == rhs.latitude
+    }
 }
