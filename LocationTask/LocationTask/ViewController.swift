@@ -18,18 +18,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     
     var isStarted = false
-    var startLocation:CLLocation!
-    var traveledDistance:Double = 0
+    var startLocation: CLLocation!
+    var traveledDistance: Double = 0
     var locationManager = CLLocationManager()
-    var price:Int!
-    var startTime: NSDate?
-    var endTime: NSDate?
+    var price: Int!
+    var startTime: Date?
+    var endTime: Date?
     var oldLocation: CLLocation?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -47,35 +46,43 @@ class ViewController: UIViewController {
     @IBAction func startEndTrip(_ sender: Any) {
         if price != nil {
             errorLabel.text = ""
-            
             if isStarted {
-                isStarted = false
-                endTime = NSDate()
-                startEndButton.backgroundColor = .systemGreen
-                distanceLabel.text =
-                    String(format:"%.2f",Float(traveledDistance / 1000.0 + 0.005)) + "km"
-                timeLabel.text = String(format:"%.2f",Double((endTime!.timeIntervalSince((startTime! as Date))))) + "sec"
-                priceLabel.text = String(Int(ceil(traveledDistance / 1000.0)) * price) + "dram"
-                startEndButton.setTitle("Start trip", for: .normal)
-                startLocation = nil
-                oldLocation = nil
-                locationManager.stopUpdatingLocation()
+                endTrip()
             } else {
-                isStarted = true
-                startTime = NSDate()
-                startEndButton.backgroundColor = .systemRed
-                traveledDistance = 0
-                distanceLabel.text = "Distance"
-                timeLabel.text = "Time"
-                priceLabel.text = "Price"
-                startEndButton.setTitle("End trip", for: .normal)
-                oldLocation = locationManager.location
-                locationManager.startUpdatingLocation()
+                startTrip()
             }
         } else {
             errorLabel.text = "Enter Price"
         }
     }
+    
+    func startTrip() {
+        isStarted = true
+        startTime = Date()
+        startEndButton.backgroundColor = .systemRed
+        traveledDistance = 0
+        distanceLabel.text = "Distance"
+        timeLabel.text = "Time"
+        priceLabel.text = "Price"
+        startEndButton.setTitle("End trip", for: .normal)
+        oldLocation = locationManager.location
+        locationManager.startUpdatingLocation()
+    }
+    
+    func endTrip() {
+        isStarted = false
+        endTime = Date()
+        startEndButton.backgroundColor = .systemGreen
+        distanceLabel.text =
+            String(format:"%.2f",Float(traveledDistance / 1000.0 + 0.005)) + " km"
+        timeLabel.text = String(format:"%.2f",Double((endTime!.timeIntervalSince((startTime! as Date))))) + " sec"
+        priceLabel.text = String(Int(ceil(traveledDistance / 1000.0)) * price) + " dram"
+        startEndButton.setTitle("Start trip", for: .normal)
+        startLocation = nil
+        oldLocation = nil
+        locationManager.stopUpdatingLocation()
+    }
+    
 }
 
 extension ViewController: CLLocationManagerDelegate {
