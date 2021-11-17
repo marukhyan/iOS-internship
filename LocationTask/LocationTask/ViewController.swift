@@ -9,6 +9,7 @@ import UIKit
 import CoreLocation
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var inputField: UITextField!
     @IBOutlet weak var setButton: UIButton!
@@ -25,7 +26,6 @@ class ViewController: UIViewController {
     var startTime: Date?
     var endTime: Date?
     var oldLocation: CLLocation?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
