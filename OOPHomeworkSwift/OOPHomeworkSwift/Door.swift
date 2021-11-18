@@ -13,19 +13,25 @@ protocol Openable {
 }
 
 class Door: Openable {
-    private var isClosed: Bool
+    var isClosed: Bool
     
     init(isClosed: Bool = true) {
         self.isClosed = isClosed
     }
     
     func openDoor() {
-        isClosed = false
-        print("Door is opened")
+        if !isClosed {
+            print("Door is opened")
+        } else {
+            print("Door is locked you can't open the door")
+        }
     }
     
     func closeDoor() {
-        isClosed = true
-        print("Door is closed")
+        if !isClosed {
+            print("Door is closed")
+        } else {
+            print("Door is locked you can't close the door again")
+        }
     }
 }

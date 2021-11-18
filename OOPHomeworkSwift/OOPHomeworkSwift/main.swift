@@ -36,7 +36,7 @@ while userCommand != "Exit" {
     print("""
 
 We can do following things here
-1 - Go to another floor
+1 - Go to another floor with elevator
 2 - Check doors in \(elevator.floorNumber) floor
 3 - Turn on Alarm
 Or type "Exit" for exit
@@ -51,12 +51,10 @@ Or type "Exit" for exit
         print("Which aparment you want to check ?: ")
         let apartmentNumber = Int(readLine()!)!
         building.floors[currentFloor].apartments[apartmentNumber].door.openDoor()
-        print("Now you are on \(elevator.floorNumber) floor and \(apartmentNumber) apartment, we don't have something here let's go back to do, if you agree type something :)")
-        var _ = readLine()
-        building.floors[currentFloor].apartments[apartmentNumber].door.closeDoor()
     case "3":
         building.fireAlarm()
-        
+    case "Exit":
+        break
     default:
         print("Please repeat your choice")
     }

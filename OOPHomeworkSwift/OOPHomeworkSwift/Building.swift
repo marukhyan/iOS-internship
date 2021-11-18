@@ -24,7 +24,7 @@ class Building {
         elevator.isWorking = false
         for floor in floors {
             for apartment in floor.apartments {
-                apartment.door.openDoor()
+                apartment.door.isClosed = false
             }
         }
     }
