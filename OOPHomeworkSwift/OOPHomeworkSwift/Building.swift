@@ -7,16 +7,21 @@
 
 import Foundation
 
-class Building {
-    var floors: [Floor]!
+final class Building {
+    var floors: [Floor]
     var numberOfFloors: Int
     var numberOfApartments: Int
+    var elevator = Elevator()
     
     init(numberOfFloors: Int, numberOfApartments: Int) {
         self.numberOfFloors = numberOfFloors
         self.numberOfApartments = numberOfApartments
-        floors = Array(repeating: Floor(numberOfApartments: numberOfApartments), count: numberOfFloors)
-        
+        self.floors = Array(repeating: Floor(numberOfApartments: numberOfApartments), count: numberOfFloors)
+        elevator.delegate = self
+    }
+    
+    func useElevator(floorNumber: Int) {
+        elevator.callElevator(goToFloor: floorNumber)
     }
     
     func fireAlarm() {
@@ -24,19 +29,28 @@ class Building {
         elevator.isWorking = false
         for floor in floors {
             for apartment in floor.apartments {
-                apartment.door.isClosed = false
+                apartment.door.openDoor()
             }
         }
     }
+    
+    func turnOnlightOnFloor(number: Int) {
+        floors[number].lightIsOn = true
+        print("Light is On")
+    }
+    
+    func turnOfflightOnFloor(number: Int) {
+        floors[number].lightIsOn = false
+        print("Light is Off")
+    }
+    
 }
 
 extension Building: ElevatorDelegate {
     func turnOnLightOnThisFloor(number: Int) {
-        self.floors[number].lightIsOn = true
-        print("Light is On")
+        self.turnOnlightOnFloor(number: number)
         DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(5), execute: {
-            self.floors[number].lightIsOn = false
-            print("Light is Off")
+            self.turnOfflightOnFloor(number: number)
         })
     }
     

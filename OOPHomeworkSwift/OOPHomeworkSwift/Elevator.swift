@@ -9,20 +9,17 @@ protocol ElevatorDelegate: AnyObject {
     func turnOnLightOnThisFloor(number: Int)
 }
 
-import Foundation
-
-class Elevator {
+final class Elevator {
     var isWorking = true
-    var elevatorDoorsAreOpen = false
+    var door = Door(isLocked: false)
+    var currentFloor = 1
     weak var delegate: ElevatorDelegate?
-    var floorNumber = 1
-    func callElevator() {
+    
+    func callElevator(goToFloor floorNumber: Int) {
         if isWorking {
-            print("You have called the elevator")
             openDoor()
-            print("Which floor do you want to go ?: ")
-            floorNumber = Int(readLine()!)!
             goToThisFloor(number: floorNumber)
+            currentFloor = floorNumber
             closeDoor()
         } else {
             print("Elevators are turned off, Alarm mode is on")
@@ -41,11 +38,9 @@ class Elevator {
 extension Elevator: Openable {
     func openDoor() {
         print("Elevator doors are open")
-        elevatorDoorsAreOpen = true
     }
     
     func closeDoor() {
         print("Elevator doors are closed")
-        elevatorDoorsAreOpen = false
     }
 }

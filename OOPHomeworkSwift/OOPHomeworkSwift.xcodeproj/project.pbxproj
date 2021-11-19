@@ -13,6 +13,7 @@
 		ACE1099C27468C37002B3AF3 /* Door.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1099B27468C37002B3AF3 /* Door.swift */; };
 		ACE1099E27468E14002B3AF3 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1099D27468E14002B3AF3 /* Building.swift */; };
 		ACE109A02746905D002B3AF3 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1099F2746905D002B3AF3 /* Floor.swift */; };
+		ACE109A22747C95E002B3AF3 /* CommandEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE109A12747C95E002B3AF3 /* CommandEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,7 @@
 		ACE1099B27468C37002B3AF3 /* Door.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Door.swift; sourceTree = "<group>"; };
 		ACE1099D27468E14002B3AF3 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		ACE1099F2746905D002B3AF3 /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
+		ACE109A12747C95E002B3AF3 /* CommandEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				ACE1099727468AE0002B3AF3 /* Elevator.swift */,
 				ACE1099927468C03002B3AF3 /* Apartment.swift */,
 				ACE1099B27468C37002B3AF3 /* Door.swift */,
+				ACE109A12747C95E002B3AF3 /* CommandEngine.swift */,
 			);
 			path = OOPHomeworkSwift;
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE109A22747C95E002B3AF3 /* CommandEngine.swift in Sources */,
 				ACE109A02746905D002B3AF3 /* Floor.swift in Sources */,
 				ACE1099127468992002B3AF3 /* main.swift in Sources */,
 				ACE1099C27468C37002B3AF3 /* Door.swift in Sources */,
