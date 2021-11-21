@@ -9,13 +9,9 @@ import Foundation
 
 final class Building {
     var floors: [Floor]
-    var numberOfFloors: Int
-    var numberOfApartments: Int
     var elevator = Elevator()
     
     init(numberOfFloors: Int, numberOfApartments: Int) {
-        self.numberOfFloors = numberOfFloors
-        self.numberOfApartments = numberOfApartments
         self.floors = Array(repeating: Floor(numberOfApartments: numberOfApartments), count: numberOfFloors)
         elevator.delegate = self
     }
