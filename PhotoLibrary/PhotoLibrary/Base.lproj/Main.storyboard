@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FIR-v5-0WK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="763"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1QP-rk-3J7">
+                                    <size key="itemSize" width="170" height="192"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="Wxe-qT-NMi" customClass="ImageCollectionViewCell" customModule="PhotoLibrary" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="192"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="24G-wL-R5g">
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="192"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pcT-g2-tzR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="192"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="NOR-7D-xO4"/>
+                                                        <constraint firstAttribute="height" constant="150" id="OMz-US-NkC"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="pcT-g2-tzR" secondAttribute="trailing" id="7cy-Me-Gxx"/>
+                                                <constraint firstAttribute="bottom" secondItem="pcT-g2-tzR" secondAttribute="bottom" id="a1k-vL-aja"/>
+                                                <constraint firstItem="pcT-g2-tzR" firstAttribute="leading" secondItem="24G-wL-R5g" secondAttribute="leading" id="dI5-LO-UcD"/>
+                                                <constraint firstItem="pcT-g2-tzR" firstAttribute="top" secondItem="24G-wL-R5g" secondAttribute="top" id="wSr-kH-74I"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="170" height="192"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="pcT-g2-tzR" id="9TB-Z3-SB7"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="VWc-Ue-T1k">
+                                <rect key="frame" x="0.0" y="845" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="VWc-Ue-T1k" secondAttribute="bottom" id="8qf-GS-GtZ"/>
+                            <constraint firstItem="VWc-Ue-T1k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fi1-fS-wbA"/>
+                            <constraint firstItem="FIR-v5-0WK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="S0d-Wg-SdW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FIR-v5-0WK" secondAttribute="trailing" id="gwl-Za-P5l"/>
+                            <constraint firstItem="FIR-v5-0WK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jCA-Gm-hH2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VWc-Ue-T1k" secondAttribute="trailing" id="jhH-xW-d5s"/>
+                            <constraint firstItem="FIR-v5-0WK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-55" id="pu5-N3-2Zh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="FIR-v5-0WK" id="2bF-P2-rrO"/>
+                        <outlet property="searchBar" destination="VWc-Ue-T1k" id="dC0-xt-29n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="78.348214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
