@@ -30,10 +30,9 @@ struct URLS: Codable {
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
+    let cache = NSCache<NSString, UIImage>()
     var results: [Result] = []
     
     override func viewDidLoad() {
@@ -41,6 +40,27 @@ class ViewController: UIViewController {
         
         collectionView.dataSource = self
         searchBar.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        self.hideKeyboardWhenTappedAround()
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            UIView.animate(withDuration: 0.1, animations: { () -> Void in
+                if self.view.frame.origin.y == 0 {
+                    self.view.frame.origin.y -= keyboardSize.height
+                    self.view.layoutIfNeeded()
+                }
+            })
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        self.view.frame.origin.y = 0
+        
     }
     
     func getPhotos(query: String) {
@@ -48,9 +68,11 @@ class ViewController: UIViewController {
         
         guard let url = URL(string: urlLink) else { return }
         URLSession.shared.dataTask(with: url) { data, response, error in
+            
             guard let data = data, error == nil else { return }
             do {
                 let json = try JSONDecoder().decode(APIResponse.self, from: data)
+                
                 DispatchQueue.main.async {
                     self.results = json.results
                     self.collectionView.reloadData()
@@ -72,7 +94,23 @@ extension ViewController: UICollectionViewDataSource {
         
         let imageURL = results[indexPath.row].urls.regular
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionViewCell", for: indexPath) as! ImageCollectionViewCell
-        cell.setup(with: imageURL)
+        
+        if let image = cache.object(forKey: imageURL as NSString) {
+            cell.imageView.image = image
+            
+        } else if let url = URL(string: imageURL) {
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                guard let data = data, error == nil else {return}
+                DispatchQueue.main.async {
+                    if let image = UIImage(data: data) {
+                        self.cache.setObject(image, forKey: imageURL as NSString)
+                        cell.imageView.image = image
+                    } else {
+                        cell.imageView.image = nil
+                    }
+                }
+            }.resume()
+        }
         return cell
     }
 }
@@ -85,5 +123,17 @@ extension ViewController: UISearchBarDelegate {
             collectionView.reloadData()
             getPhotos(query: text)
         }
+    }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
